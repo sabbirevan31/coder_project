@@ -267,7 +267,7 @@ html {
     font-size: 29px;
 }
 
-.testimonial .sec-text::before {
+/* .testimonial .sec-text::before {
     content: "";
     position: absolute;
     top: 0;
@@ -277,7 +277,7 @@ html {
     background-color: rgb(0, 0, 0);
     border-left: 2px solid rgb(36, 216, 255);
     animation: animata 4s steps(12)infinite;
-}
+} */
 
 @keyframes animata{
     40%, 60% {
