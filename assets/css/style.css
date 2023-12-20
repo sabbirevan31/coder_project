@@ -901,10 +901,12 @@ html {
     background-color: var(--white-color);
     border-radius: 6px;
     margin-top: 40px;
+    height: 100% !important;
 }
 
 .client_img img {
-    width: 40%;
+    width: 50% !important;
+    height: 100% !important;
     display: block;
     padding: 20px;
     margin: auto;
@@ -931,21 +933,37 @@ html {
 .contact_form p {
     font-family: var(--secondary-font-family);
     font-size: 14px;
-    color: rgb(107, 107, 107);
+    color: var(--white-color);
     padding-top: 10px;
     padding-left: 5px;
 }
 
 input[type=text] {
-    width: 50%;
+    width: 60%;
     padding: 6px;
     margin: 7px;
     border-radius: 4px;
     display: block;
-    background-color: black;
     border: 1px solid var(--sky-color);
     font-family: var(--secondary-font-family);
     font-size: 14px;
+    outline: none;
+    color: var(--white-color);
+    background-color: var(--gray-color);
+}
+
+.form textarea {
+    background-color: var(--gray-color);
+    width: 60%;
+    padding: 8px;
+    margin: 7px;
+    border-radius: 4px;
+    display: block;
+    border: 1px solid var(--sky-color);
+    font-family: var(--secondary-font-family);
+    font-size: 14px;
+    outline: none;
+    color: var(--white-color);
 }
 
 .form button {
@@ -953,14 +971,16 @@ input[type=text] {
     background-image: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
     color: var(--white-color);
     border: none;
-    padding: 3px 140px;
+    width: 60%;
     border-radius: 5px;
     font-family: var(--secondary-font-family);
     margin-left: 5px;
+    padding: 6px;
+    border: 1px solid var(--sky-color);
 }
 
 .form button:hover {
-    background: black;
+    background: var(--gray-color);
     border: 1px solid var(--sky-color);
     transition: 1s;
 }
@@ -1005,6 +1025,115 @@ input[type=text] {
     padding-top: 8px;
     padding-left: 5px;
 }
+
+@media only screen and (max-width:992px) {
+    #contact_section {
+        padding: 30px 0px;
+        background-image: url(..//img/Group\ 474.png);
+        background-size: cover;
+    }
+
+    .contact_content {
+        margin: 20px;
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 6px;
+        margin: 0px;
+        border-radius: 4px;
+        display: block;
+        border: 1px solid var(--sky-color);
+        font-family: var(--secondary-font-family);
+        font-size: 14px;
+        outline: none;
+        color: var(--white-color);
+        margin-top: 7px;
+        background-color: var(--gray-color);
+    }
+    
+    .form textarea {
+        background-color: var(--gray-color);
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        display: block;
+        border: 1px solid var(--sky-color);
+        font-family: var(--secondary-font-family);
+        font-size: 14px;
+        outline: none;
+        margin: 0px;
+        margin-top: 7px;
+        color: var(--white-color);
+    }
+    
+    .form button {
+        background-color: var(--sky-color);
+        background-image: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+        color: var(--white-color);
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        font-family: var(--secondary-font-family);
+        margin-left: 0px;
+        padding: 6px;
+        margin-top: 7px;
+        border: 1px solid var(--sky-color);
+    }
+
+    .form {
+        margin-left: 0px;
+    }
+        
+    .contact_form img {
+            width: 180px;
+            display: block;
+            margin: auto;
+    }
+
+    .contact_form p {
+            font-family: var(--secondary-font-family);
+            font-size: 14px;
+            color: var(--white-color);
+            padding-top: 10px;
+            padding-left: 0px;
+            text-align: center;
+    }
+
+    .contact-icon {
+        text-align: center;
+    }
+
+    .contact_info h1 {
+        font-family: var(--primary-font-family);
+        color: var(--sky-color);
+        font-size: 30px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .border-info {
+        width: 160px;
+        padding: 1px;
+        background-color: var(--sky-color);
+        background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(18, 63, 70));
+        border-radius: 10px;
+        margin-bottom: 5px;
+        display: block;
+        margin: auto;
+    }
+    
+    .border-bottom-info {
+        width: 80px;
+        margin: 10px;
+        padding: 1px;
+        background-color: var(--sky-color);
+        background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(18, 63, 70));
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+        margin-top: 8px;
+    }
+}
 /* contact section end */
 
 /* footer section start */
@@ -1030,6 +1159,8 @@ footer {
     border-radius: 10px;
     margin-top: 10px;
 }
+
+
 /* footer section end */
 
 .scrollup {
