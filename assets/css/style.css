@@ -17,7 +17,7 @@
     --btn-font-size: 19px;
     --secondary-font-size: 16px;
     --sky-color: rgb(36, 216, 255);
-    --gray-color: rgb(20, 20, 20);
+    --gray-color: rgb(225, 225, 225, 7%);
     --white-color: white;
 }
 
@@ -184,7 +184,7 @@ html {
     padding-left: 10px;
 }
 .hero_testimonial button {
-    background-color: black;
+    background-color: rgb(225, 225, 225, 7%);
     color: var(--sky-color);
     border: 1px solid var(--sky-color);
     padding: 9px 25px;
@@ -276,13 +276,16 @@ html {
 }
 
 @media only screen and (max-width: 992px) {
+    .experience_area {
+        margin: 10px;
+    }
     .hero_testimonial h1 {
-        font-size: 50px;
+        font-size: 40px;
         text-align: center;
         font-weight: 800;
         color: var(--sky-color);
         padding-bottom: 10px;
-        margin-top: 90px;
+        margin-top: 120px;
     }
 
     .testimonial {
@@ -309,7 +312,7 @@ html {
         padding: 9px 25px;
         border-radius: 10px;
         font-family: var(--secondary-font-family);
-        margin-top: 20px !important;
+        margin-top: 30px !important;
         transition: 2s;
         display: block;
         margin: auto;
@@ -394,7 +397,11 @@ html {
 }
 
 .about-img img {
-    width: 60%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .about-area h2 {
@@ -409,7 +416,6 @@ html {
     font-size: var(--primary-font-size);
     color: var(--sky-color);
     margin-top: 30px;
-    margin-bo: 30px;
 }
 
 .about-area p {
@@ -487,6 +493,42 @@ html {
     transition: 0.9s;
     background-image: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
 }
+
+@media only screen and (max-width: 992px) {
+    .about-img img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+
+    .about-area h2 {
+        font-family: var(--secondary-font-family);
+        font-size: var(--primary-font-size);
+        color: var(--sky-color);
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .about-area h3 {
+        font-family: var(--secondary-font-family);
+        font-size: var(--primary-font-size);
+        color: var(--sky-color);
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .about-area p {
+        font-family: var(--secondary-font-family);
+        font-size: 14px;
+        color: var(--white-color);
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .progress {
+        margin: 10px;
+    }
+  }
 /* about section */
 
 /* services section start */
@@ -501,7 +543,7 @@ html {
     padding: 20px;
     border: 1px solid var(--sky-color);
     margin-top: 30px;
-    background-color: var(--gray-color);
+    background-color: rgb(225, 225, 225, 7%);
     transition: 2s;
 }
 
@@ -532,13 +574,18 @@ html {
     padding-top: 20px;
 }
 
-.services_card span {
+.services_area {
+    display: flex;
+    justify-content: space-between;
+    height: 100% !important;
+}
+
+.services_area span {
     text-align: end;
     font-family: var(--secondary-font-family);
     color: var(--white-color);
     font-size: var(--secondary-font-size);
-    padding-top: 30px;
-    padding-left: 50px;
+    padding-top: 10px;
 }
 
 .services_card button {
@@ -559,6 +606,19 @@ html {
     background: var(--gray-color);
     color: var(--white-color);
     transition: 1s;
+}
+
+@media only screen and (max-width:992px) {
+    .services_card {
+        box-shadow: 0 0px 2px rgb(210, 244, 252), 0 0 4px rgb(221, 245, 252) ;
+        padding: 10px;
+        padding: 20px;
+        border: 1px solid var(--sky-color);
+        margin-top: 20px !important;
+        background-color: rgb(225, 225, 225, 7%);
+        transition: 2s;
+        margin: 25px;
+    }
 }
 /* services section end */
 
@@ -583,48 +643,52 @@ html {
 
 .Project_img  {
     position: relative;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
+
 
 .overlay {
     position: absolute;
-    height: 100%;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(99, 227, 255, 50%);
+    border-radius: 10px;
+    overflow: hidden;
     width: 100%;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(36, 216, 255, 0.3);
-    opacity: 0.5;
-    border-radius: 10px;
-    opacity: 0;
-    transition: 2s;
+    height: 0;
+    transition: .5s ease;
 }
 
-.overlay:hover {
-    opacity: 1;
-    transition: 1s;
+.Project_img:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+
+
+.overlay a img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.overlay-contant {
-    background-color: rgba(7, 7, 7, 0.7);
-    object-fit: cover;
-    width: 16%;
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-    margin-top: 140px;
+
+.overlay a img:hover {
+    background-color: rgb(36, 216, 255);
+    border-radius: 6px;
 }
 
-.overlay-contant:hover {
-    background-color: var(--sky-color);
+@media only screen and (max-width:992px) {
+    .project_contain {
+        margin: 20px;
+    }
 }
-
-.overlay-contant img{
-    object-fit: cover;
-    width: 60px;
-    display: block;
-    margin: auto;
-    padding: 14px;
-}
-
 /* project section end */
 
 /* testimonial section start */
@@ -640,14 +704,21 @@ html {
 }
 
 .testimonial-content {
-    background-color: var(--gray-color);
+    background-image: url(..//img/Rectangle\ 16.png);
+    background-position: center;
+    background-size: cover;
     padding: 20px;
     border-radius: 10px;
 }
 
-.testimonial-content img {
+.testimoial-img  {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.testimoial-img img {
     width: 80px !important;
-    margin-left: 249px;
+    display: flex;
     
 }
 
@@ -668,6 +739,7 @@ html {
 .testimoial-icon {
     display: flex;
     padding: 10px;
+    margin-top: 15px;
 }
 
 .testimoial-icon p {
@@ -715,10 +787,12 @@ html {
     right: 0;
 }  
   
-@media screen and (max-width: 990px) {
-    .testimonial-header h1 {
-      font-size: 2em;
+@media only screen and (max-width:992px) {
+    .content-area {
+        margin: 20px;
     }
+
+
 }
 /* testimonial section end */
 
@@ -735,9 +809,11 @@ html {
 }
 
 .blog_area {
-    margin: 20px;
+    /* margin: 20px; */
     width: 100%;
     background-image: url(..//img/Group\ 475.png);
+    background-position: center;
+    background-size: cover;
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 10px;
@@ -781,6 +857,37 @@ html {
     color: var(--white-color);
     transition: 1s;
     border: 1px solid var(--sky-color);
+}
+
+.blag_text .blag_btn {
+    background: var(--gray-color) !important;
+    color: var(--white-color);
+    border: none;
+    padding: 6px 25px;
+    border-radius: 8px;
+    font-family: var(--secondary-font-family);
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 1px solid var(--sky-color);
+}
+
+.blag_text .blag_btn:hover {
+    background: var(--sky-color);
+    background-image: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255)) !important;
+    color: var(--white-color);
+    transition: 1s !important;
+    border: 1px solid var(--sky-color);
+}
+
+@media only screen and (max-width:992px) {
+    .blog_content {
+        
+        margin: 20px;
+    }
+
+    .blog_area {
+        margin-top: 20px;
+    }
 }
 /* blog section end */
 
