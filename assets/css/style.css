@@ -27,20 +27,18 @@ html {
 
 .border {
     width: 160px;
-    padding: 1px;
-    background-color: var(--sky-color);
+    padding: 0.21px;
     display: block;
     margin: auto;
-    background-image: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
-    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255)) !important;
     margin-bottom: 5px;
     border: none;
+    border-radius: 10px;
 }
 
 .border-bottom {
     width: 80px;
-    margin: 10px;
-    padding: 1px;
+    height: 2px;
     background-color: var(--sky-color);
     display: block;
     margin: auto;
@@ -169,7 +167,11 @@ html {
     font-weight: 800;
     color: var(--sky-color);
     padding-bottom: 20px;
-    margin-top: 170px;
+    margin-top: 130px;
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero_testimonial p {
@@ -242,13 +244,25 @@ html {
     font-family: var(--primary-font-family);
 }
 
+.testimonial first-text {
+    position: relative;
+    color: var(--white-color) !important;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: var(--primary-font-family);
+}
+
 .testimonial .text {
     position: relative;
-    color: var(--white-color);
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
     font-weight: 600; 
 }
 
-/* .testimonial .text .first-text {
+.testimonial .text .first-text {
     color: black;
     font-size: 29px;
 }
@@ -263,7 +277,7 @@ html {
     background-color: rgb(0, 0, 0);
     border-left: 2px solid rgb(36, 216, 255);
     animation: animata 4s steps(12)infinite;
-} */
+}
 
 @keyframes animata{
     40%, 60% {
@@ -337,7 +351,7 @@ html {
 
 /* experience section start */
 #experience_section {
-    padding: 40px 0px;
+    padding: 60px 0px;
     background-color: black !important;
 }
 
@@ -393,22 +407,28 @@ html {
 .about_content h1 {
     text-align: center;
     font-family: var(--primary-font-family);
-    color: var(--sky-color);
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .about-img img {
     width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.about-area {
+    margin-top: 50px;
 }
 
 .about-area h2 {
     font-family: var(--secondary-font-family);
     font-size: var(--primary-font-size);
     color: var(--sky-color);
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 .about-area h3 {
@@ -416,6 +436,7 @@ html {
     font-size: var(--primary-font-size);
     color: var(--sky-color);
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .about-area p {
@@ -513,7 +534,7 @@ html {
         font-family: var(--secondary-font-family);
         font-size: var(--primary-font-size);
         color: var(--sky-color);
-        margin-top: 30px;
+        margin-top: 20px;
         text-align: center;
     }
     
@@ -525,8 +546,12 @@ html {
         text-align: center;
     }
 
+    .about-area {
+        margin-top: 10px;
+    }
+
     .progress {
-        margin: 10px;
+        margin: 20px;
     }
   }
 /* about section */
@@ -556,7 +581,11 @@ html {
 .service_contant h1 {
     text-align: center;
     font-family: var(--primary-font-family);
-    color: var(--sky-color);
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .services_card h2 {
@@ -631,7 +660,11 @@ html {
 .project_contain h1 {
     text-align: center;
     font-family: var(--primary-font-family);
-    color: var(--sky-color);
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .Project_img img {
@@ -659,7 +692,7 @@ html {
     overflow: hidden;
     width: 100%;
     height: 0;
-    transition: .5s ease;
+    transition: 1s ease;
 }
 
 .Project_img:hover .overlay {
@@ -700,7 +733,11 @@ html {
 .testimonial-header h1 {
     text-align: center;
     font-family: var(--primary-font-family);
-    color: var(--sky-color);
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .testimonial-content {
@@ -761,8 +798,8 @@ html {
   }
   
   .owl-dot {
-    width: 20px !important;
-    height: 20px !important;
+    width: 10px !important;
+    height: 10px !important;
     background-color: black !important;
     border: 2px solid var(--sky-color) !important;
     display: inline-block;
@@ -772,6 +809,8 @@ html {
   
   .owl-dot.active {
     background-color: var(--sky-color) !important;
+    width: 20px !important;
+    height: 20px !important;
   }
 
   .owl-prev {
@@ -805,7 +844,11 @@ html {
 .blog_content h1 {
     text-align: center;
     font-family: var(--primary-font-family);
-    color: var(--sky-color);
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .blog_area {
@@ -901,21 +944,26 @@ html {
     background-color: var(--white-color);
     border-radius: 6px;
     margin-top: 40px;
-    height: 100% !important;
+    height: 140px !important;
 }
 
 .client_img img {
-    width: 50% !important;
+    width: 100% !important;
     height: 100% !important;
+    object-fit: contain;
     display: block;
-    padding: 20px;
+    padding: 10px;
     margin: auto;
 }
 
 .client_content h1 {
     text-align: center;
     font-family: var(--primary-font-family);
-    color: var(--sky-color);
+    background: linear-gradient(to right, rgb(18, 63, 70) , rgb(36, 216, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 /* clients section end */
 
@@ -987,7 +1035,7 @@ input[type=text] {
 
 .contact_info h1 {
     font-family: var(--primary-font-family);
-    color: var(--sky-color);
+    color: var(--white-color);
     font-size: 30px;
 }
 
@@ -1011,7 +1059,7 @@ input[type=text] {
 
 .contact-icon {
     display: flex;
-    margin: 20px;
+    margin-top: 10px;
 }
 
 .icons img {
@@ -1023,7 +1071,7 @@ input[type=text] {
     font-size: 18px;
     color: var(--white-color);
     padding-top: 8px;
-    padding-left: 5px;
+    padding-left: 10px !important;
 }
 
 @media only screen and (max-width:992px) {
@@ -1140,6 +1188,7 @@ input[type=text] {
 #footer {
     padding: 20px 0px;
     background-color: black;
+    border-top: 1px solid var(--sky-color);
 }
 
 footer {
